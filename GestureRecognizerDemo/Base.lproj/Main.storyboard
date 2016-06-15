@@ -35,11 +35,34 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-hv-4zm">
+                                <rect key="frame" x="191.5" y="210" width="217" height="180"/>
+                                <color key="backgroundColor" red="0.42985529020000002" green="1" blue="0.082598724989999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="W6o-6W-esP"/>
+                                    <constraint firstAttribute="width" constant="217" id="a2W-il-Bfc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3g5-0X-amM" appends="YES" id="q1L-ue-L1W"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L6g-hv-4zm" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="6ov-Jn-ynU"/>
+                            <constraint firstItem="L6g-hv-4zm" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="dkn-To-qmF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3g5-0X-amM">
+                    <connections>
+                        <action selector="handlePan:" destination="8rJ-Kc-sve" id="i5Z-sx-uvD"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
